@@ -7,8 +7,8 @@ import useHomePageData from "@hooks/pageData/useHomePageData"
 import Layout from "../components/layout/Layout"
 import Seo from "../components/layout/Seo"
 import PageTitle from "@components/layout/PageTitle"
-import MarchesCondensed from "@titles/Marches-condensed.inline.svg"
-import Marches from "@titles/Marches.inline.svg"
+import MarchesCondensed from "@titles/marches-condensed.inline.svg"
+import Marches from "@titles/marches.inline.svg"
 
 import {
   homeContent,
