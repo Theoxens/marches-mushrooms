@@ -66,7 +66,6 @@ module.exports = {
           "@content": `content/`,
           "@images": `src/images/`,
           "@icons": `src/icons/`,
-          // "@titles": `src/titles/`,
           "@utils": `src/utils/`,
           "@validation": `src/validation/`,
           "@src": `src/`,

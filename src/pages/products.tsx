@@ -6,7 +6,7 @@ import useProductsPageData from "@hooks/pageData/useProductsPageData"
 
 import Layout from "../components/layout/Layout"
 import Seo from "../components/layout/Seo"
-import Products from "../titles/products.inline.svg"
+import Products from "@icons/titles/products.inline.svg"
 
 import {
   productsContent,

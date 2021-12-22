@@ -6,7 +6,7 @@ import useAboutPageData from "@hooks/pageData/useAboutPageData"
 
 import Layout from "../components/layout/Layout"
 import Seo from "../components/layout/Seo"
-import AboutUs from "../titles/about-us.inline.svg"
+import AboutUs from "@icons/titles/about-us.inline.svg"
 
 import {
   aboutContent,
