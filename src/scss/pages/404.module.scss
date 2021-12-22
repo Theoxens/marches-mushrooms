@@ -1,0 +1,48 @@
+@use "@scss/abstracts/colors.module";
+@use "@scss/abstracts/breakpoints.module" as bp;
+@use "@scss/abstracts/fonts.module";
+@use "@scss/abstracts/lighting.module";
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-block: 20vh;
+}
+
+.page-title {
+  margin-bottom: 10vh;
+  @include fonts.cormorant_font;
+  text-transform: uppercase;
+}
+
+.message {
+  font-size: 1rem;
+  max-width: 80vw;
+  margin-bottom: 5vh;
+  color: colors.$white-1;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: revert;
+  margin-top: 5vh;
+}
+
+.link {
+  font-size: 1.2rem;
+  max-width: 65vw;
+  cursor: pointer;
+  padding: 0.3rem 0.8rem;
+
+  &::marker {
+    color: #444;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
