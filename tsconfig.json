@@ -41,9 +41,9 @@
       "@icons/*": [
         "src/icons/*"
       ],
-      "@titles/*": [
-        "src/titles/*"
-      ],
+      // "@titles/*": [
+      //   "src/titles/*"
+      // ],
       "@utils/*": [
         "src/utils/*"
       ],
