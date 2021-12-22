@@ -1,14 +1,14 @@
 import React from "react"
-import { Link, PageProps } from "gatsby"
+import { PageProps } from "gatsby"
 
 import useLinkedData from "@hooks/useLinkedData"
 import useContactPageData from "@hooks/pageData/useContactPageData"
 
 import Layout from "../components/layout/Layout"
 import Seo from "../components/layout/Seo"
+import FacebookIcon from "@icons/fa/Facebook.inline.svg"
 import ContactUs from "../titles/contact-us.inline.svg"
 import SocialMediaLink from "@components/UI/SocialMediaLink"
-import FacebookIcon from "@icons/fa/Facebook.inline.svg"
 import InstagramIcon from "@icons/fa/Instagram.inline.svg"
 import TwitterIcon from "@icons/fa/Twitter.inline.svg"
 import EmailIcon from "@icons/fa/Envelope.inline.svg"
