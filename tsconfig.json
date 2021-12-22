@@ -1,0 +1,63 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ESNext",
+    "jsx": "preserve",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "sourceRoot": "/",
+    "baseUrl": "./",
+    "paths": {
+      "@constants/*": [
+        "src/constants/*"
+      ],
+      "@context/*": [
+        "src/context/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@scss/*": [
+        "src/scss/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@content/*": [
+        "content/*"
+      ],
+      "@images/*": [
+        "src/images/*"
+      ],
+      "@icons/*": [
+        "src/icons/*"
+      ],
+      "@titles/*": [
+        "src/titles/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@validation/*": [
+        "src/validation/*"
+      ],
+      "@src/*": [
+        "src/*"
+      ],
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "public",
+    ".cache",
+  ]
+}

@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import useContactData from "../hooks/useContactData"
-import useSiteMetadata from "../hooks/useSiteMetadata"
+import useContactData from "../../hooks/useContactData"
+import useSiteMetadata from "../../hooks/useSiteMetadata"
 
 interface Props {
   path: string

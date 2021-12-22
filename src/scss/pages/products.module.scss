@@ -1,0 +1,51 @@
+@use "@scss/abstracts/colors.module.scss";
+@use "@scss/abstracts/breakpoints.module.scss" as bp;
+
+.products-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+}
+
+.page-title {
+  margin-bottom: 10vh;
+}
+
+.divider {
+  width: min(40vw, 12rem);
+  height: 1px;
+  background-color: colors.$white-1;
+  border-radius: 50%;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-self: flex-start;
+  margin: 5rem 15vw;
+  font-size: 1.3rem;
+
+  @include bp.media-width-2 {
+    align-self: center;
+    align-items: center;
+  }
+
+  @include bp.media-width-3 {
+    @include bp.media-height-2 {
+      font-size: 1.5rem;
+      gap: 2rem;
+    }
+  }
+}
+
+.link {
+  cursor: pointer;
+  text-transform: capitalize;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

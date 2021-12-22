@@ -1,0 +1,84 @@
+@use "scss/abstracts/colors.module.scss" as colors;
+@use "scss/abstracts/breakpoints.module.scss" as bp;
+
+.footer {
+  bottom: 0;
+  background-color: colors.$black-1;
+  padding-top: 3rem;
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+.contact-info {
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.copyright-notice {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.5rem;
+}
+
+@include bp.media-width-2 {
+  .social-media-links {
+    font-size: 2.5rem;
+  }
+
+  .contact-info {
+    font-size: 1.1rem;
+    gap: 1.2rem;
+  }
+}
+
+@include bp.media-height-1 {
+  @include bp.media-width-3 {
+    .footer {
+      padding-top: 5rem;
+    }
+
+    .social-media-links {
+      font-size: 3rem;
+    }
+
+    .contact-info {
+      font-size: 1.2rem;
+      gap: 1.5rem;
+    }
+  }
+}
+
+@include bp.media-height-2 {
+  @include bp.media-width-3 {
+    .social-media-links {
+      font-size: 3.2rem;
+    }
+
+    .contact-info {
+      font-size: 1.3rem;
+      gap: 1.5rem;
+      padding: 5rem 1rem;
+    }
+  }
+}

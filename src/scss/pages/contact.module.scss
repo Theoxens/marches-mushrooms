@@ -1,0 +1,112 @@
+@use "@scss/abstracts/colors.module.scss";
+@use "scss/abstracts/breakpoints.module.scss" as bp;
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+}
+
+.contact-details {
+  margin-block: 5rem 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  @include bp.media-width-3 {
+    @include bp.media-height-2 {
+      gap: 10rem;
+      margin-block: 7rem 10rem;
+    }
+  }
+}
+
+.page-title {
+  margin-bottom: 20vh;
+  max-width: 80vw;
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 3rem;
+}
+
+.social-media-link {
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.divider {
+  width: min(40vw, 12rem);
+  height: 1px;
+  background-color: colors.$white-1;
+  border-radius: 50%;
+}
+
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  @include bp.media-width-2 {
+    flex-direction: row;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact {
+  max-width: 80vw;
+  font-size: 1.2rem;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+
+    .icon {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.icon {
+  overflow: visible;
+  display: inline-block;
+  width: 1.125em;
+  height: 1em;
+  vertical-align: -0.125em;
+  font-size: inherit;
+  margin-right: 1rem;
+}
+
+.address-styles {
+  font-size: 1.2rem;
+  max-width: 80vw;
+
+  @include bp.media-width-1 {
+    padding-left: 2rem;
+    font-size: 1.3rem;
+  }
+}
+
+.company-name {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  text-transform: capitalize;
+
+  @include bp.media-width-1 {
+    font-size: 1.5rem;
+  }
+}

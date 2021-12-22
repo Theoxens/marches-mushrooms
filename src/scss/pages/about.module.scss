@@ -1,0 +1,64 @@
+@use "@scss/abstracts/colors.module";
+@use "@scss/abstracts/breakpoints.module" as bp;
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: auto;
+}
+
+.hero {
+  min-height: 70vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0 0 0 0;
+  z-index: -2;
+}
+
+.hero-image-filter {
+  display: block;
+  position: absolute;
+  inset: 0 0 0 0;
+  z-index: -1;
+  background: linear-gradient(
+    rgba(mix(colors.$black-1, colors.$blue-1, 50%), 0),
+    rgba(mix(colors.$black-1, colors.$blue-1, 50%), 1)
+  );
+}
+
+.page-title {
+  position: absolute;
+  bottom: 8%;
+  left: 10vw;
+
+  max-width: 70vw;
+}
+
+.text-container {
+  margin: 3rem 10vw;
+  max-width: 35rem;
+  text-align: left;
+  align-self: start;
+}
+
+@include bp.media-width-3 {
+  @include bp.media-height-2 {
+    .page-title {
+      width: min(30vw, 30rem);
+      height: auto;
+    }
+
+    .text-container {
+      margin: 7rem 10vw;
+      max-width: 50rem;
+    }
+  }
+}

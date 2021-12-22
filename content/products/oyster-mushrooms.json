@@ -1,0 +1,22 @@
+{
+  "name": "oyster mushrooms",
+  "path": "/oyster-mushrooms",
+  "metaTitle": "oyster mushrooms",
+  "metaDescription": "oyster mushrooms",
+  "title": "oyster mushrooms",
+  "heroImage": {
+    "image": "oyster_mushrooms_picked.jpg",
+    "alt": "fresh herefordshire oyster mushrooms"
+  },
+  "image2": {
+    "image": "pink-oysters-in-bowl.jpg",
+    "alt": "fresh herefordshire oyster mushrooms"
+  },
+  "image3": {
+    "image": "pink-oysters-underside.jpg",
+    "alt": "fresh herefordshire oyster mushrooms"
+  },
+  "text1": "Describe oyster mushrooms (the food), how they taste, the texture, common pairings, recipes etc.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "text2": "How are your oyster mushrooms from herefordshire grown? lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "text3": "How can someone buy your oysters from herefordshire? lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+}

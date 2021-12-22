@@ -1,0 +1,142 @@
+@use "@scss/abstracts/colors.module";
+@use "@scss/abstracts/breakpoints.module" as bp;
+@use "@scss/abstracts/fonts.module";
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: auto;
+}
+
+.hero {
+  min-height: 70vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.page-title {
+  position: absolute;
+  bottom: 8%;
+  left: 10vw;
+  max-width: 70vw;
+  @include fonts.cormorant_font;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 2.5rem;
+
+  @include bp.media-width-1 {
+    font-size: 2.7rem;
+  }
+
+  @include bp.media-width-2 {
+    font-size: 2.9rem;
+  }
+
+  @include bp.media-width-3 {
+    font-size: 3.4rem;
+  }
+
+  @include bp.media-width-4 {
+    font-size: 4rem;
+  }
+}
+
+.hero-image-styles {
+  position: absolute;
+  inset: 0 0 0 0;
+  z-index: -2;
+}
+
+.hero-image-filter {
+  display: block;
+  position: absolute;
+  inset: 0 0 0 0;
+  z-index: -1;
+  background: linear-gradient(
+    rgba(mix(colors.$black-1, colors.$blue-1, 50%), 0),
+    rgba(mix(colors.$black-1, colors.$blue-1, 50%), 1)
+  );
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+
+.section-1 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  @include bp.media-width-3 {
+    @include bp.media-height-2 {
+      .text {
+        margin-top: 15vh;
+        margin-bottom: 10vh;
+      }
+    }
+  }
+}
+
+.section-2 {
+  margin-block: 3rem;
+
+  @include bp.media-width-3 {
+    flex-direction: row;
+    margin-block: 0;
+
+    & .text {
+      max-width: 50vw;
+      padding-left: 10vw;
+    }
+
+    & .section-image {
+      aspect-ratio: 1;
+    }
+  }
+}
+
+.section-3 {
+  margin-block: 5rem;
+
+  @include bp.media-width-3 {
+    @include bp.media-height-2 {
+      margin-block: 25vh;
+    }
+  }
+}
+
+.section-image {
+  width: 100%;
+  aspect-ratio: calc(5 / 3);
+}
+
+.text {
+  white-space: pre-wrap;
+  max-width: 80vw;
+
+  @include bp.media-width-2 {
+    @include bp.media-height-1 {
+      font-size: 1.3rem;
+    }
+  }
+
+  @include bp.media-width-3 {
+    max-width: 60vw;
+
+    @include bp.media-height-2 {
+      font-size: 1.5rem;
+    }
+  }
+}

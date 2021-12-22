@@ -1,14 +1,21 @@
 require("dotenv").config()
-const { URL, STAGING_URL } = process.env
-const url = URL || STAGING_URL
+
+const { URL } = process.env
+const url = URL || "http://localhost:8000"
+
+const metaData = {
+  companyName: "Marches Mushrooms",
+  altCompanyName: "Marches",
+  title: `Marches Mushrooms`,
+  description: `Marches Mushrooms is a Herefordshire based gourmet mushroom producer.`,
+  author: `@4SightDesigns`,
+  siteUrl: url,
+}
+
+const sitePrimaryColor = "#061326"
 
 module.exports = {
-  siteMetadata: {
-    title: `Marches Mushrooms`,
-    description: `Marches Mushrooms is a Herefordshire based gourmet mushroom producer.`,
-    author: `@4SightDesigns`,
-    siteUrl: url,
-  },
+  siteMetadata: metaData,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
@@ -38,13 +45,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: metaData.companyName,
+        short_name: metaData.altCompanyName,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: sitePrimaryColor,
+        theme_color: sitePrimaryColor,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/icons/MM-icon.inline.svg`,
       },
     },
     {
@@ -58,13 +65,24 @@ module.exports = {
           "@hooks": `src/hooks/`,
           "@content": `content/`,
           "@images": `src/images/`,
+          "@icons": `src/icons/`,
+          "@titles": `src/titles/`,
           "@utils": `src/utils/`,
           "@validation": `src/validation/`,
           "@src": `src/`,
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
     `gatsby-plugin-sass`,
+    "gatsby-plugin-dts-css-modules",
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-offline`,

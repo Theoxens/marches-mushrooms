@@ -1,0 +1,43 @@
+@use "@scss/abstracts/breakpoints.module.scss" as bp;
+
+.page-title {
+  margin: 6rem 0 2rem;
+  max-width: 70vw;
+}
+
+.condensed {
+  align-self: flex-start;
+  margin-left: 10vw;
+
+  @include bp.media-width-3 {
+    display: none;
+  }
+}
+
+.linear {
+  display: none;
+  margin-top: max(30vh, 10rem);
+  align-self: center;
+
+  @include bp.media-width-3 {
+    display: block;
+
+    @include bp.media-height-1 {
+      transform: scale(1.2);
+    }
+
+    @include bp.media-height-2 {
+      transform: scale(1.3);
+    }
+
+    @include bp.media-height-3 {
+      transform: scale(1.4);
+    }
+  }
+
+  @include bp.media-width-4 {
+    @include bp.media-height-2 {
+      transform: scale(1.6);
+    }
+  }
+}

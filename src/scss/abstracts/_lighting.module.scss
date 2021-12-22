@@ -1,0 +1,13 @@
+$drop-1: -1px 2px 3px rgba(0, 0, 0, 0.15);
+$highlight-1: inset 1px 1px 2px rgba(255, 255, 255, 0.1);
+
+$float-bounce-1: -1px -1px 2px rgba(255, 255, 255, 0.25);
+$float-drop-1: 1px 2px 3px rgba(0, 0, 0, 0.25);
+
+@mixin raised-1 {
+  box-shadow: $drop-1, $highlight-1;
+}
+
+@mixin float-1 {
+  box-shadow: $float-bounce-1, $float-drop-1, $highlight-1;
+}

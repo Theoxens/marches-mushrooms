@@ -1,0 +1,52 @@
+@use "@scss/abstracts/breakpoints.module.scss" as bp;
+@use "@scss/abstracts/colors.module.scss";
+@use "@scss/abstracts/lighting.module.scss";
+
+.toggle-button {
+  z-index: 9999;
+  position: relative;
+  width: 2.4rem;
+  aspect-ratio: 1;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > div {
+    height: 0.25rem;
+    width: 60%;
+    background-color: colors.$white-1;
+    border-radius: 1rem;
+    position: absolute;
+    transition: all 0.3s ease-out;
+    box-shadow: lighting.$drop-1;
+  }
+
+  & > div:nth-child(1) {
+    transform: translateY(-0.5rem);
+  }
+
+  & > div:nth-child(3) {
+    transform: translateY(0.5rem);
+  }
+
+  @include bp.media-width-3 {
+    display: none;
+  }
+}
+
+.close-menu {
+  & > div:nth-child(1) {
+    transform: rotate(-45deg);
+  }
+
+  & > div:nth-child(2) {
+    display: none;
+  }
+
+  & > div:nth-child(3) {
+    transform: rotate(45deg);
+  }
+}

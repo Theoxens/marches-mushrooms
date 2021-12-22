@@ -1,0 +1,19 @@
+@use "scss/abstracts/colors.module.scss" as colors;
+
+.social-media-link {
+  font-size: inherit;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.icon {
+  overflow: visible;
+  display: inline-block;
+  width: 1.125em;
+  height: 1em;
+  vertical-align: -0.125em;
+  font-size: inherit;
+}

@@ -1,0 +1,22 @@
+module.exports = [
+  `
+    type Image {
+      alt: String!
+      image: File! @link(by: "relativePath")
+    }
+
+    type ProductPageData {
+      name: String!
+      path: String!
+      metaTitle: String!
+      metaDescription: String!
+      title: String!
+      heroImage: Image!
+      image2: Image
+      image3: Image
+      text1: String!
+      text2: String
+      text3: String
+    }
+  `,
+]

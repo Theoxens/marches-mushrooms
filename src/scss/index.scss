@@ -1,0 +1,37 @@
+@use "./base/index.scss";
+@use "./abstracts/colors.module.scss";
+@use "./abstracts/breakpoints.module.scss" as bp;
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(colors.$blue-1, colors.$black-1);
+  color: colors.$white-1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Helvetica, sans-serif;
+
+  & * :focus-visible {
+    outline: 0.2rem solid colors.$white-1;
+  }
+
+  #___gatsby {
+    #gatsby-focus-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+p {
+  @include bp.media-width-3 {
+    @include bp.media-height-1 {
+      font-size: 1.1rem;
+    }
+
+    @include bp.media-height-2 {
+      font-size: 1.2rem;
+    }
+  }
+}

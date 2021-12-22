@@ -1,0 +1,64 @@
+@use "@scss/abstracts/breakpoints.module.scss" as bp;
+@use "@scss/abstracts/colors.module.scss";
+@use "@scss/abstracts/lighting.module.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 100;
+  background: linear-gradient(
+    rgba(colors.$black-1, 0.9),
+    rgba(colors.$black-1, 0)
+  );
+  padding: 0.5rem 0;
+}
+
+.home-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 1rem;
+}
+
+.brand-mark {
+  height: 2rem;
+  width: auto;
+  border-radius: 2rem;
+  @include lighting.raised-1;
+  cursor: pointer;
+}
+
+@include bp.media-width-3 {
+  .header {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .brand-mark {
+    height: 2.5rem;
+  }
+
+  .home-link {
+    margin-left: 1vw;
+    margin-top: 2vh;
+  }
+
+  @include bp.media-height-2 {
+    .brand-mark {
+      height: 3rem;
+    }
+  }
+
+  @include bp.media-height-3 {
+    .brand-mark {
+      height: 4rem;
+    }
+  }
+}

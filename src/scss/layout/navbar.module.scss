@@ -1,0 +1,60 @@
+@use "scss/abstracts/textures.module.scss" as texture;
+@use "scss/abstracts/breakpoints.module.scss" as bp;
+@use "scss/abstracts/lighting.module.scss" as lighting;
+
+.click-off {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.links {
+  position: fixed;
+  inset: 0 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: min(20vh, 10rem) 3rem;
+  gap: 1rem;
+  @include texture.frosted-glass;
+  transition: transform 0.3s ease-out;
+  @include lighting.raised-1;
+  overflow: auto;
+}
+
+.menu-closed {
+  transform: translateX(100%);
+}
+
+.menu-open {
+  transform: translateX(0%);
+}
+
+@include bp.media-width-3 {
+  .links {
+    position: relative;
+    width: min(70vw, 50rem);
+    inset: unset;
+    padding: max(0.5rem, 1.5vh) max(3rem, 5vw);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -0.3rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    transition: unset;
+  }
+
+  .menu-closed,
+  .menu-open {
+    transform: unset;
+  }
+
+  @include bp.media-height-1 {
+    .links {
+      margin-top: 3vh;
+    }
+  }
+}

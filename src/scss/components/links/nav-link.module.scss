@@ -1,0 +1,29 @@
+@use "@scss/abstracts/colors.module.scss" as colors;
+@use "@scss/abstracts/breakpoints.module.scss" as bp;
+
+.nav-link {
+  padding: 0.2rem;
+  font-size: 1.5rem;
+  color: colors.$white-1;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @include bp.media-width-3 {
+    font-size: 1.2rem;
+
+    @include bp.media-height-1 {
+      font-size: 1.3rem;
+    }
+
+    @include bp.media-height-2 {
+      font-size: 1.4rem;
+    }
+
+    @include bp.media-height-3 {
+      font-size: 1.5rem;
+    }
+  }
+}

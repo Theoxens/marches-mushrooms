@@ -1,0 +1,84 @@
+@use "@scss/abstracts/colors.module";
+@use "@scss/abstracts/breakpoints.module" as bp;
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hero-message-container {
+  background: linear-gradient(
+    rgba(colors.$black-1, 0),
+    rgba(colors.$black-1, 1)
+  );
+  padding: 6rem 0 3rem;
+}
+
+.hero-message {
+  max-width: 70vw;
+  align-self: flex-start;
+  font-family: "Times New Roman", "sans-serif";
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: light;
+  color: colors.$grey-1;
+  margin-left: 10vw;
+}
+
+.hero-image {
+  opacity: 0.57;
+}
+
+.hero-image-filter {
+  display: none;
+}
+
+@include bp.media-width-3 {
+  .home-content {
+    min-height: 100vh;
+  }
+
+  .hero-message-container {
+    background: none;
+    padding: 0;
+    position: absolute;
+    left: 10vw;
+    top: 85vh;
+  }
+
+  .hero-message {
+    margin: 0;
+  }
+
+  .hero-image {
+    position: absolute;
+    inset: 0 0 0 0;
+    z-index: -2;
+    opacity: 0.75;
+  }
+
+  .hero-image-filter {
+    display: block;
+    position: absolute;
+    inset: 0 0 50vh 0;
+    z-index: -1;
+    background: linear-gradient(
+      rgba(colors.$black-1, 0.8),
+      rgba(colors.$black-1, 0)
+    );
+  }
+
+  @include bp.media-height-2 {
+    .hero-message {
+      font-size: 1.5rem;
+    }
+  }
+}

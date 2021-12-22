@@ -18,7 +18,9 @@ interface ContactData {
 }
 
 const useContactData = (): ContactData => {
-  const data = useStaticQuery<ContactData>(graphql`
+  const { contactsJson } = useStaticQuery<{
+    contactsJson: ContactData
+  }>(graphql`
     query {
       contactsJson {
         landline
@@ -38,7 +40,7 @@ const useContactData = (): ContactData => {
       }
     }
   `)
-  return data
+  return contactsJson
 }
 
 export default useContactData
