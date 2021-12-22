@@ -1,5 +1,9 @@
 {
   "page": "home",
   "metaTitle": "",
-  "metaDescription": ""
+  "metaDescription": "",
+  "heroImage": {
+    "alt": "king oyster mushrooms on slate",
+    "image": "king-oysters-on-slate.jpg"
+  }
 }

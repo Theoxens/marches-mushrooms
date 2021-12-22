@@ -47,8 +47,8 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ path }) => {
             </h2>
           </div>
           <GatsbyImage
-            alt="fresh mushrooms"
-            image={heroImage}
+            alt={heroImage.alt}
+            image={heroImage.image.childImageSharp.gatsbyImageData}
             className={heroImageStyles}
           />
           <div className={heroImageFilter} />

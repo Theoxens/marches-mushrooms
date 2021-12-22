@@ -12,3 +12,4 @@ export const heroImage: string;
 export const heroImageFilter: string;
 export const pageTitle: string;
 export const textContainer: string;
+export const text: string;

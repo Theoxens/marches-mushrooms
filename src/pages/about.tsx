@@ -15,6 +15,7 @@ import {
   heroImage as heroImageStyles,
   pageTitle,
   textContainer,
+  text,
 } from "../scss/pages/about.module.scss"
 import { GatsbyImage } from "gatsby-plugin-image"
 
@@ -37,19 +38,14 @@ const AboutPage: React.FC<PageProps<DataProps>> = ({ path }) => {
         <div className={hero}>
           <AboutUs className={pageTitle} />
           <GatsbyImage
-            alt="fresh mushrooms"
-            image={heroImage}
+            alt={heroImage.alt}
+            image={heroImage.image.childImageSharp.gatsbyImageData}
             className={heroImageStyles}
           />
           <div className={heroImageFilter} />
         </div>
         <div className={textContainer}>
-          {mainText.map(t => (
-            <>
-              <p>{t}</p>
-              <br />
-            </>
-          ))}
+          <p className={text}>{mainText}</p>
         </div>
       </main>
     </Layout>

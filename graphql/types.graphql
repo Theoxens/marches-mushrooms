@@ -5,6 +5,21 @@ module.exports = [
       image: File! @link(by: "relativePath")
     }
 
+    type HomePageData {
+      page: String!
+      metaTitle: String!
+      metaDescription: String!
+      heroImage: Image!
+    }
+
+    type AboutPageData {
+      page: String!
+      metaTitle: String!
+      metaDescription: String!
+      heroImage: Image!
+      mainText: String!
+    }
+
     type ProductPageData {
       name: String!
       path: String!

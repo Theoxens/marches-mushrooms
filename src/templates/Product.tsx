@@ -1,3 +1,4 @@
+import { PageImage } from "@hooks/pageData/useHomePageData"
 import useLinkedData from "@hooks/useLinkedData"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
@@ -23,24 +24,15 @@ import {
 
 //============================================================
 
-interface ImageProps {
-  alt: string
-  image: {
-    childImageSharp: {
-      gatsbyImageData: IGatsbyImageData
-    }
-  }
-}
-
 interface DataProps {
   pageData: {
     metaTitle: string
     metaDescription: string
     name: string
     title: string
-    heroImage: ImageProps
-    image2?: ImageProps
-    image3?: ImageProps
+    heroImage: PageImage
+    image2?: PageImage
+    image3?: PageImage
     text1: string
     text2?: string
     text3?: string

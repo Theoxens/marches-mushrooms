@@ -1,31 +1,35 @@
 import { useStaticQuery, graphql } from "gatsby"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 
+export interface PageImage {
+  alt: string
+  image: {
+    childImageSharp: {
+      gatsbyImageData: IGatsbyImageData
+    }
+  }
+}
+
 interface HomePageData {
   metaTitle: string
   metaDescription: string
-  heroImage: IGatsbyImageData
+  heroImage: PageImage
 }
 
 const useHomePageData = (): HomePageData => {
-  const { pageData, heroImage } = useStaticQuery(graphql`
+  const { pageData } = useStaticQuery(graphql`
     query HomePageData {
-      pageData: pagesJson(page: { eq: "home" }) {
+      pageData: HomePageData {
         metaTitle
         metaDescription
-      }
-      heroImage: file(relativePath: { eq: "king-oysters-on-slate.jpg" }) {
-        childImageSharp {
-          gatsbyImageData
+        heroImage {
+          ...ImageData
         }
       }
     }
   `)
 
-  return {
-    ...pageData,
-    heroImage: heroImage.childImageSharp.gatsbyImageData,
-  }
+  return pageData
 }
 
 export default useHomePageData
