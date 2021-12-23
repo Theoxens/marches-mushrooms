@@ -19,6 +19,7 @@ interface Props {
   preload?: {
     href: string
     as: string
+    type: string
   }[]
 }
 
@@ -131,8 +132,8 @@ function SEO(props: Props) {
         },
       ].concat(meta)}
     >
-      {preload.map(({ href, as }) => (
-        <link key={href} rel="preload" href={href} as={as} />
+      {preload.map(({ href, as, type }) => (
+        <link key={href} rel="preload" href={href} as={as} type={type} />
       ))}
       {linkedData.map(data => (
         <script type="application/ld+json">{JSON.stringify(data)}</script>
