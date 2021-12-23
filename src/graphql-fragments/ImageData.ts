@@ -5,7 +5,7 @@ export const ImageData = graphql`
     alt
     image {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(width: 1920)
       }
     }
   }
