@@ -1,7 +1,7 @@
 import { PageImage } from "@hooks/pageData/useHomePageData"
 import useLinkedData from "@hooks/useLinkedData"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 
 import Layout from "../components/layout/Layout"
