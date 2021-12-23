@@ -7,6 +7,8 @@ import React from "react"
 import Layout from "../components/layout/Layout"
 import Seo from "../components/layout/Seo"
 
+import titleFont from "@src/fonts/CormorantGaramond-Light.woff2"
+
 import {
   pageContent,
   pageTitle,
@@ -57,6 +59,13 @@ const Product: React.FC<PageProps<DataProps>> = ({
     text3,
   } = pageData
   const { page, breadcrumb } = useLinkedData(["page", "breadcrumb"], {})
+  const preload = [
+    {
+      href: titleFont,
+      as: "font",
+      type: "font/woff2",
+    },
+  ]
 
   return (
     <Layout>
@@ -66,6 +75,7 @@ const Product: React.FC<PageProps<DataProps>> = ({
         description={metaDescription}
         reverse
         linkedData={[page, breadcrumb]}
+        preload={preload}
       />
       <main className={pageContent}>
         <div className={hero}>
