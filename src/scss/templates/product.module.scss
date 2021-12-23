@@ -46,7 +46,7 @@
 }
 
 .hero-image-styles {
-  position: absolute;
+  position: absolute !important;
   inset: 0 0 0 0;
   z-index: -2;
 }
