@@ -16,6 +16,10 @@ interface Props {
   linkedData?: {
     [x: string]: any
   }[]
+  preload?: {
+    href: string
+    as: string
+  }[]
 }
 
 function SEO(props: Props) {
@@ -30,6 +34,7 @@ function SEO(props: Props) {
     twitterAlt = "",
     linkedData = [],
     path,
+    preload = [],
   } = props
 
   const siteMetadata = useSiteMetadata()
@@ -126,6 +131,9 @@ function SEO(props: Props) {
         },
       ].concat(meta)}
     >
+      {preload.map(({ href, as }) => (
+        <link key={href} rel="preload" href={href} as={as} />
+      ))}
       {linkedData.map(data => (
         <script type="application/ld+json">{JSON.stringify(data)}</script>
       ))}
