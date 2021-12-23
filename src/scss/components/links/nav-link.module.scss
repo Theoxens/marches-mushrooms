@@ -2,6 +2,7 @@
 @use "@scss/abstracts/breakpoints.module.scss" as bp;
 
 .nav-link {
+  position: relative;
   padding: 0.2rem;
   font-size: 1.5rem;
   color: colors.$white-1;
@@ -25,5 +26,17 @@
     @include bp.media-height-3 {
       font-size: 1.5rem;
     }
+  }
+}
+
+.indicator {
+  @include bp.media-width-3 {
+    position: absolute;
+    bottom: -0.3rem;
+    left: 1rem;
+    right: 1rem;
+    height: 0.2rem;
+    border-radius: 1rem;
+    background-color: colors.$white-1;
   }
 }

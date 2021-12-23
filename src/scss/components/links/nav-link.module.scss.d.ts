@@ -7,3 +7,4 @@ export const errorRed: string;
 export const checkedGreen: string;
 export const focusBlue: string;
 export const navLink: string;
+export const indicator: string;

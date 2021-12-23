@@ -1,7 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
+import { globalHistory as history } from "@reach/router"
 
-import { navLink } from "@scss/components/links/nav-link.module.scss"
+import { navLink, indicator } from "@scss/components/links/nav-link.module.scss"
 
 interface Props {
   to: string
@@ -9,9 +10,14 @@ interface Props {
 }
 
 const NavLink = ({ to, label }: Props) => {
+  const { pathname } = history.location
+
+  const isActive = to === "/" ? to === pathname : pathname.startsWith(to)
+
   return (
     <li className={navLink}>
       <Link to={to}>{label}</Link>
+      {isActive && <div className={indicator} />}
     </li>
   )
 }
