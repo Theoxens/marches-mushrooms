@@ -139,15 +139,15 @@ export const pageQuery = graphql`
         ...ImageData
       }
       image2 {
+        ...ImageData
+      }
+      image3 {
         alt
         image {
           childImageSharp {
             gatsbyImageData(width: 992, sizes: "(min-width: 992px) 50vw, 100vw")
           }
         }
-      }
-      image3 {
-        ...ImageData
       }
       text1
       text2
