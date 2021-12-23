@@ -14,7 +14,7 @@ import {
   homeContent,
   hero,
   heroMessageContainer,
-  heroMessage,
+  heroMessage as heroMessageStyles,
   heroImageFilter,
   heroImage as heroImageStyles,
 } from "../scss/pages/home.module.scss"
@@ -27,7 +27,7 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ path }) => {
     ["business", "website", "page", "breadcrumb"],
     {}
   )
-  const { metaDescription, heroImage } = useHomePageData()
+  const { metaDescription, heroImage, heroMessage } = useHomePageData()
 
   return (
     <Layout>
@@ -41,11 +41,11 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ path }) => {
       <main className={homeContent}>
         <PageTitle Condensed={MarchesCondensed} Linear={Marches} />
         <div className={hero}>
-          <div className={heroMessageContainer}>
-            <h2 className={heroMessage}>
-              Award nominated gourmet mushroom producers
-            </h2>
-          </div>
+          {heroMessage && (
+            <div className={heroMessageContainer}>
+              <h2 className={heroMessageStyles}>{heroMessage}</h2>
+            </div>
+          )}
           <GatsbyImage
             alt={heroImage.alt}
             image={heroImage.image.childImageSharp.gatsbyImageData}

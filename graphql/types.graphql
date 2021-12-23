@@ -10,6 +10,7 @@ module.exports = [
       metaTitle: String!
       metaDescription: String!
       heroImage: Image!
+      heroMessage: String
     }
 
     type AboutPageData {

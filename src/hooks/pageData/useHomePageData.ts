@@ -14,6 +14,7 @@ interface HomePageData {
   metaTitle: string
   metaDescription: string
   heroImage: PageImage
+  heroMessage?: string
 }
 
 const useHomePageData = (): HomePageData => {
@@ -25,6 +26,7 @@ const useHomePageData = (): HomePageData => {
         heroImage {
           ...ImageData
         }
+        heroMessage
       }
     }
   `)
