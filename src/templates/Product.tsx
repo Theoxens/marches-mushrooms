@@ -74,6 +74,7 @@ const Product: React.FC<PageProps<DataProps>> = ({
             alt={heroImage.alt}
             image={heroImage.image.childImageSharp.gatsbyImageData}
             className={heroImageStyles}
+            loading="eager"
           />
           <div className={heroImageFilter} />
         </div>
