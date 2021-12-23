@@ -1,8 +1,10 @@
-import { PageImage } from "@hooks/pageData/useHomePageData"
-import useLinkedData from "@hooks/useLinkedData"
+import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import React from "react"
+import loadable from "@loadable/component"
+
+import { PageImage } from "@hooks/pageData/useHomePageData"
+import useLinkedData from "@hooks/useLinkedData"
 
 import Layout from "../components/layout/Layout"
 import Seo from "../components/layout/Seo"
@@ -18,12 +20,10 @@ import {
   productDetails,
   section,
   section1,
-  section2,
-  section3,
   text,
-  sectionImage,
-} from "../scss/templates/product.module.scss"
+} from "@scss/templates/product.module.scss"
 
+const ProductBF = loadable(() => import("@components/pages/ProductBF"))
 //============================================================
 
 interface DataProps {
@@ -92,33 +92,9 @@ const Product: React.FC<PageProps<DataProps>> = ({
         <div className={productDetails}>
           <div className={[section, section1].join(" ")}>
             <p className={text}>{text1}</p>
-            {image2 && (
-              <GatsbyImage
-                alt={image2.alt}
-                image={image2.image.childImageSharp.gatsbyImageData}
-                className={sectionImage}
-              />
-            )}
           </div>
 
-          {(image3?.image || text2) && (
-            <div className={[section, section2].join(" ")}>
-              <p className={text}>{text2}</p>
-              {image3 && (
-                <GatsbyImage
-                  alt={image3.alt}
-                  image={image3.image.childImageSharp.gatsbyImageData}
-                  className={sectionImage}
-                />
-              )}
-            </div>
-          )}
-
-          {text3 && (
-            <div className={[section, section3].join(" ")}>
-              <p className={text}>{text3}</p>
-            </div>
-          )}
+          <ProductBF {...{ image2, image3, text2, text3 }} />
         </div>
       </main>
     </Layout>

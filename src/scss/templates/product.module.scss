@@ -90,6 +90,11 @@
 }
 
 .section-2 {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.section-3 {
   margin-block: 3rem;
 
   @include bp.media-width-3 {
@@ -107,7 +112,7 @@
   }
 }
 
-.section-3 {
+.section-4 {
   margin-block: 5rem;
 
   @include bp.media-width-3 {

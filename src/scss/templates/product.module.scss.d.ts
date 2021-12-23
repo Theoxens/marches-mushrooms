@@ -16,5 +16,6 @@ export const section: string;
 export const section1: string;
 export const text: string;
 export const section2: string;
-export const sectionImage: string;
 export const section3: string;
+export const sectionImage: string;
+export const section4: string;
