@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "4sight-designs",
   "dependencies": {
+    "@loadable/component": "^5.15.2",
     "dotenv": "^10.0.0",
     "gatsby": "^4.3.0",
     "gatsby-alias-imports": "^1.0.6",
@@ -32,6 +33,7 @@
     "sass": "^1.45.1"
   },
   "devDependencies": {
+    "@types/loadable__component": "^5.13.4",
     "@types/react-helmet": "^6.1.4",
     "prettier": "^2.4.1"
   },
