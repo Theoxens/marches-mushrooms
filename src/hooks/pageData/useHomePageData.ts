@@ -11,6 +11,7 @@ export interface PageImage {
 }
 
 interface HomePageData {
+  page: string
   metaTitle: string
   metaDescription: string
   heroImage: PageImage
@@ -21,6 +22,7 @@ const useHomePageData = (): HomePageData => {
   const { pageData } = useStaticQuery(graphql`
     query HomePageData {
       pageData: HomePageData {
+        page
         metaTitle
         metaDescription
         heroImage {

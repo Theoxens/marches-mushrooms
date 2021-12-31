@@ -2,6 +2,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { PageImage } from "./useHomePageData"
 
 interface AboutPageData {
+  page: string
   metaTitle: string
   metaDescription: string
   heroImage: PageImage
@@ -9,9 +10,10 @@ interface AboutPageData {
 }
 
 const useAboutPageData = (): AboutPageData => {
-  const { pageData, heroImage } = useStaticQuery(graphql`
+  const { pageData } = useStaticQuery(graphql`
     query AboutPageData {
       pageData: AboutPageData {
+        page
         metaTitle
         metaDescription
         heroImage {

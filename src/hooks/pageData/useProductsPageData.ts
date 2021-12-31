@@ -2,6 +2,7 @@ import getNodes from "@utils/getNodes"
 import { useStaticQuery, graphql } from "gatsby"
 
 interface ProductsPageData {
+  page: string
   metaTitle: string
   metaDescription: string
   products: {
@@ -14,6 +15,7 @@ const useProductsPageData = (): ProductsPageData => {
   const { pageData, products } = useStaticQuery(graphql`
     query ProductsPageData {
       pageData: pagesJson(page: { eq: "products" }) {
+        page
         metaTitle
         metaDescription
       }

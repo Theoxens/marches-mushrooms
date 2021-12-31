@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useMemo } from "react"
 import { PageProps } from "gatsby"
 
 import useLinkedData from "@hooks/useLinkedData"
@@ -18,12 +18,23 @@ import {
   text,
 } from "../scss/pages/about.module.scss"
 import { GatsbyImage } from "gatsby-plugin-image"
+import capitalize from "@utils/capitalize"
 
 interface DataProps {}
 
 const AboutPage: React.FC<PageProps<DataProps>> = ({ path }) => {
-  const { breadcrumb, page } = useLinkedData(["page", "breadcrumb"], {})
-  const { metaDescription, heroImage, mainText } = useAboutPageData()
+  const {
+    metaDescription,
+    heroImage,
+    mainText,
+    page: pageName,
+  } = useAboutPageData()
+  const _pageName = useMemo(() => capitalize(pageName), [pageName])
+  const { breadcrumb, page } = useLinkedData(["page", "breadcrumb"], {
+    pageName: _pageName,
+    metaDescription,
+    crumbs: [{ name: _pageName }],
+  })
 
   return (
     <Layout>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useMemo } from "react"
 import { PageProps } from "gatsby"
 
 import useLinkedData from "@hooks/useLinkedData"
@@ -29,12 +29,18 @@ import {
   companyName,
 } from "../scss/pages/contact.module.scss"
 import useContactData from "@hooks/useContactData"
+import capitalize from "@utils/capitalize"
 
 interface DataProps {}
 
 const ContactPage: React.FC<PageProps<DataProps>> = ({ path }) => {
-  const { breadcrumb, page } = useLinkedData(["page", "breadcrumb"], {})
-  const { metaDescription } = useContactPageData()
+  const { metaDescription, page: pageName } = useContactPageData()
+  const _pageName = useMemo(() => capitalize(pageName), [pageName])
+  const { breadcrumb, page } = useLinkedData(["page", "breadcrumb"], {
+    pageName: _pageName,
+    metaDescription,
+    crumbs: [{ name: _pageName }],
+  })
   const { email, mobile, landline, address, facebook, instagram, twitter } =
     useContactData()
 

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useMemo } from "react"
 import { PageProps } from "gatsby"
 
 import useLinkedData from "@hooks/useLinkedData"
@@ -19,15 +19,26 @@ import {
   heroImage as heroImageStyles,
 } from "../scss/pages/home.module.scss"
 import { GatsbyImage } from "gatsby-plugin-image"
+import capitalize from "@utils/capitalize"
 
 interface DataProps {}
 
 const IndexPage: React.FC<PageProps<DataProps>> = ({ path }) => {
+  const {
+    metaDescription,
+    heroImage,
+    heroMessage,
+    page: pageName,
+  } = useHomePageData()
+  const _pageName = useMemo(() => capitalize(pageName), [pageName])
   const { business, breadcrumb, page, website } = useLinkedData(
     ["business", "website", "page", "breadcrumb"],
-    {}
+    {
+      pageName: _pageName,
+      metaDescription,
+      crumbs: [{ name: _pageName }],
+    }
   )
-  const { metaDescription, heroImage, heroMessage } = useHomePageData()
 
   return (
     <Layout>
