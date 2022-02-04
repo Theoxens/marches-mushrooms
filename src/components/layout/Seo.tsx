@@ -41,7 +41,8 @@ function SEO(props: Props) {
   const siteMetadata = useSiteMetadata()
   const { twitter, instagram } = useContactData()
 
-  const metaDescription = description || ""
+  const metaDescription =
+    description.trim().length > 0 ? description : siteMetadata.description
   const template = reverse
     ? `${siteMetadata.title} | %s`
     : `%s | ${siteMetadata.title}`
