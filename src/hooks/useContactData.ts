@@ -1,20 +1,22 @@
 import { graphql, useStaticQuery } from "gatsby"
 
 interface ContactData {
-  landline: string
-  mobile: string
-  email: string
-  address: {
-    companyName: string
-    line1: string
-    line2: string
-    city: string
-    postCounty: string
-    postCode: string
-  }
-  facebook: string
-  instagram: string
-  twitter: string
+  landline: string | undefined
+  mobile: string | undefined
+  email: string | undefined
+  address:
+    | {
+        companyName: string | undefined
+        line1: string | undefined
+        line2: string | undefined
+        city: string | undefined
+        postCounty: string | undefined
+        postCode: string | undefined
+      }
+    | undefined
+  facebook: string | undefined
+  instagram: string | undefined
+  twitter: string | undefined
 }
 
 const useContactData = (): ContactData => {

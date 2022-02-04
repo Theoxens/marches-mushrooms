@@ -42,10 +42,10 @@ const useLinkedData = (c: (keyof LinkedData)[], props: LinkedDataProps) => {
           description: siteDescription,
           address: {
             "@type": "PostalAddress",
-            streetAddress: `${address.line1}, ${address.line2}`,
-            addressLocality: address.city,
-            addressRegion: address.postCounty,
-            postalCode: address.postCode,
+            streetAddress: `${address?.line1}, ${address?.line2}`,
+            addressLocality: address?.city,
+            addressRegion: address?.postCounty,
+            postalCode: address?.postCode,
             addressCountry: "UK",
           },
           contactPoint: {
