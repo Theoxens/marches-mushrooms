@@ -94,7 +94,7 @@ git: command not found
 - Fetch the source code from github with the following command:
 
   ```bash
-  git clone https://github.com/acacia-marquees/website.git
+  git clone https://github.com/marches-mushrooms/website.git
   ```
 
 - Install the dependencies locally with the following command:
@@ -102,8 +102,6 @@ git: command not found
   ```bash
   npm install
   ```
-
-- Create a `.env` file in the project's root directory, and fill in the environment variables - see environment variables section below.
 
   <p>&nbsp;</p>
 
@@ -115,13 +113,15 @@ git: command not found
     npm run start
     ```
 
+    Your site is now running at `http://localhost:8000`
+
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+
     <p>&nbsp;</p>
 
 3.  **Open the source code and start editing!**
 
-    Your site is now running at `http://localhost:8000`
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+    The development version of the website running on your local machine will hot-reload when a change is saved in the code base.
 
     <p>&nbsp;</p>
 
@@ -160,6 +160,20 @@ git: command not found
     ```bash
     npm run clean
     ```
+
+    <p>&nbsp;</p>
+
+7.  **Exit the server.**
+
+    To close locally running servers, either close/delete the running terminal or press:
+
+    ```bash
+    ctrl+c
+    ```
+
+    in the running terminal.
+
+    _Note: VSCode will automatically terminate programs running in the built-in terminal when closed._
 
     <p>&nbsp;</p>
 
