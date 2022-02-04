@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://www.marchesmushrooms.co.uk">
-    <img alt="Gatsby" src="./src/icons/MM-icon.inline.svg" width="60" />
+    <img alt="Marches Mushrooms Icon" src="./src/icons/MM-icon.inline.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
