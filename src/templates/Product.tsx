@@ -58,7 +58,9 @@ const Product: React.FC<PageProps<DataProps>> = ({
     text2,
     text3,
   } = pageData
-  const { page, breadcrumb } = useLinkedData(["page", "breadcrumb"], {})
+  const { page, breadcrumb } = useLinkedData(["page", "breadcrumb"], {
+    crumbs: [{ name: "Products", path: "/products" }, { name: title }],
+  })
   const preload = [
     {
       href: titleFont,
