@@ -1,11 +1,12 @@
 import { graphql, useStaticQuery } from "gatsby"
 
 interface MetaData {
-  title: string
-  companyName: string
-  altCompanyName: string
-  description: string
-  siteUrl: string
+  title: string | undefined
+  companyName: string | undefined
+  altCompanyName: string | undefined
+  description: string | undefined
+  siteUrl: string | undefined
+  author: string | undefined
 }
 
 const useSiteMetadata = (): MetaData => {
@@ -19,6 +20,7 @@ const useSiteMetadata = (): MetaData => {
             title
             description
             author
+            siteUrl
           }
         }
       }
