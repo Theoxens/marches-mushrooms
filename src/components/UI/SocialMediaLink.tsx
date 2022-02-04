@@ -7,12 +7,13 @@ import {
 
 interface Props {
   href: string
+  title: string
   Icon: React.FC<{ className?: string }>
 }
 
-const SocialMediaLink = ({ href, Icon }: Props) => {
+const SocialMediaLink = ({ href, Icon, title }: Props) => {
   return (
-    <a className={socialMediaLink} href={href}>
+    <a className={socialMediaLink} href={href} aria-label={title} title={title}>
       <Icon className={icon} />
     </a>
   )

@@ -15,10 +15,12 @@ const MenuToggle = ({ toggleMenu, isMenuOpen }: Props) => {
     <button
       className={`${toggleButton} ${isMenuOpen && closeMenu}`}
       onClick={toggleMenu}
+      tabIndex={0}
+      aria-label={`${isMenuOpen ? "Close" : "Open"} menu`}
     >
-      <div className={""}></div>
-      <div className={""}></div>
-      <div className={""}></div>
+      <div />
+      <div />
+      <div />
     </button>
   )
 }

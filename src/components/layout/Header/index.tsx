@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 const Header = () => {
   return (
     <header className={header}>
-      <Link to="/" className={homeLink}>
+      <Link to="/" className={homeLink} aria-label="Home page link">
         <MM className={brandMark} />
       </Link>
       <Navbar />

@@ -23,9 +23,13 @@ const Footer = ({}: Props) => {
   return (
     <div className={footer}>
       <div className={socialMediaLinks}>
-        <SocialMediaLink href={instagram} Icon={InstagramIcon} />
-        <SocialMediaLink href={facebook} Icon={FacebookIcon} />
-        <SocialMediaLink href={twitter} Icon={TwitterIcon} />
+        <SocialMediaLink
+          href={instagram}
+          Icon={InstagramIcon}
+          title="Instagram"
+        />
+        <SocialMediaLink href={facebook} Icon={FacebookIcon} title="Facebook" />
+        <SocialMediaLink href={twitter} Icon={TwitterIcon} title="Twitter" />
       </div>
       <div className={contactInfo}>
         <a className={contact} href={`mailto:${email}`}>
