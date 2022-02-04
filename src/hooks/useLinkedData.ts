@@ -1,7 +1,7 @@
 import useSiteMetadata from "./useSiteMetadata"
 import useContactData from "./useContactData"
-import ldIcon from "../images/MM-ld-icon.png"
-import siteImage from "../images/oyster_mushrooms_picked.jpg"
+import ldIcon from "@icons/MM-ld-icon.png"
+import siteImage from "@images/siteImage/marches-mushrooms.jpg"
 
 interface LinkedData {
   business?: any

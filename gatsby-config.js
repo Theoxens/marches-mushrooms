@@ -23,7 +23,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/content/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -63,8 +63,8 @@ module.exports = {
           "@components": `src/components/`,
           "@scss": `src/scss/`,
           "@hooks": `src/hooks/`,
+          "@images": `content/images/`,
           "@content": `content/`,
-          "@images": `src/images/`,
           "@icons": `src/icons/`,
           "@utils": `src/utils/`,
           "@validation": `src/validation/`,
