@@ -1,12 +1,12 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<style>
+<!-- <style>
   @font-face {
     font-family: "Cormorant Garamond";
     src: url("../fonts/CormorantGaramond-Light.woff2") format("woff2"),
       url("../fonts/CormorantGaramond-Light.woff") format("woff"),
       url("../fonts/CormorantGaramond-Light.ttf") format("truetype");
   }
-</style>
+</style> -->
 
 <p align="center">
   <a href="https://www.marchesmushrooms.co.uk">
