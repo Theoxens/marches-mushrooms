@@ -60,17 +60,29 @@ const ContactPage: React.FC<PageProps<DataProps>> = ({ path }) => {
           <ul className={socialMediaLinks}>
             {facebook && (
               <li key={facebook} className={socialMediaLink}>
-                <SocialMediaLink href={facebook} Icon={FacebookIcon} />
+                <SocialMediaLink
+                  href={facebook}
+                  Icon={FacebookIcon}
+                  title="Facebook"
+                />
               </li>
             )}
             {instagram && (
               <li key={instagram} className={socialMediaLink}>
-                <SocialMediaLink href={instagram} Icon={InstagramIcon} />
+                <SocialMediaLink
+                  href={instagram}
+                  Icon={InstagramIcon}
+                  title="Instagram"
+                />
               </li>
             )}
             {twitter && (
               <li key={twitter} className={socialMediaLink}>
-                <SocialMediaLink href={twitter} Icon={TwitterIcon} />
+                <SocialMediaLink
+                  href={twitter}
+                  Icon={TwitterIcon}
+                  title="Twitter"
+                />
               </li>
             )}
           </ul>
