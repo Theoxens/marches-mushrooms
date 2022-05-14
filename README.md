@@ -1,13 +1,3 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<!-- <style>
-  @font-face {
-    font-family: "Cormorant Garamond";
-    src: url("../fonts/CormorantGaramond-Light.woff2") format("woff2"),
-      url("../fonts/CormorantGaramond-Light.woff") format("woff"),
-      url("../fonts/CormorantGaramond-Light.ttf") format("truetype");
-  }
-</style> -->
-
 <p align="center">
   <a href="https://www.marchesmushrooms.co.uk">
     <img alt="Marches Mushrooms Icon" src="./src/icons/MM-icon.inline.svg" width="60" />
